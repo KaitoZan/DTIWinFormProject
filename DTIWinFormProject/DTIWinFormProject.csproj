@@ -108,6 +108,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShereData.cs" />
     <EmbeddedResource Include="FrmCalculater.resx">
       <DependentUpon>FrmCalculater.cs</DependentUpon>
     </EmbeddedResource>

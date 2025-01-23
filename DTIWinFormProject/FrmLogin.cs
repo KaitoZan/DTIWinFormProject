@@ -56,7 +56,8 @@ namespace DTIWinformProject
             {
                 //ตรวจสอบชื่อผู้ใช้/รหัสผ่าน (sau/123456789, dti/987654321) เมื่อเข้า FrmMainMenu
                 if ((tbUsername.Text.Trim().ToLower() != "sau" || tbPassword.Text.Trim().ToLower() != "123456789") &&
-                     (tbUsername.Text.Trim().ToLower() != "dti" || tbPassword.Text.Trim().ToLower() != "987654321"))
+                     (tbUsername.Text.Trim().ToLower() != "dti" || tbPassword.Text.Trim().ToLower() != "987654321") &&
+                      (tbUsername.Text.Trim().ToLower() != "abc" || tbPassword.Text.Trim().ToLower() != "1234567"))
                 {
                     //ชื่อผู้ใช้รหัสผ่านไม่ถูกต้อง แสดงข้อความเตือน
                     showWaringMSG("ชื่อผู้ใช้รหัสผ่านไม่ถูกต้อง");
@@ -64,6 +65,17 @@ namespace DTIWinformProject
                 else
                 {
                     //ชื่อผู้ใช้รหัสผ่านถูกต้อง เปิด FrmMainMenu พร้อมส่งชื่อผู้ใช้ไปแสดงด้วย
+                    ShereData.loginName = tbUsername.Text.Trim();
+                    if (rdStudent.Checked == true)
+                    {
+                        ShereData.LoginType = "student";
+                    }
+                    else
+                    {
+                        ShereData.LoginType = "teacher";
+                    }
+
+
                     FrmMainMenu frmMainMenu = new FrmMainMenu();
                     frmMainMenu.Show();
                     Hide(); //ปิดหน้าจอตัวเอง
@@ -73,7 +85,7 @@ namespace DTIWinformProject
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

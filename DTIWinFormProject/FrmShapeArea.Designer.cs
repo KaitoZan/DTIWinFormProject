@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -58,15 +61,14 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
+            this.tslDateTime = new System.Windows.Forms.ToolStripLabel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -114,6 +116,30 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "วงกลม";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::DTIWinFormProject.Properties.Resources.cancel;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(463, 178);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 47);
+            this.button2.TabIndex = 59;
+            this.button2.Text = "ยกเลิก";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::DTIWinFormProject.Properties.Resources.calculator2;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(463, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 47);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "คำนวณ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -165,7 +191,7 @@
             // textBox1
             // 
             this.textBox1.AllowDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(34, 56);
+            this.textBox1.Location = new System.Drawing.Point(84, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(284, 20);
             this.textBox1.TabIndex = 20;
@@ -183,6 +209,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label4);
@@ -191,8 +219,6 @@
             this.tabPage2.Controls.Add(this.radioButton4);
             this.tabPage2.Controls.Add(this.textBox2);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -288,6 +314,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.textBox6);
             this.tabPage3.Controls.Add(this.textBox4);
@@ -298,8 +326,6 @@
             this.tabPage3.Controls.Add(this.radioButton6);
             this.tabPage3.Controls.Add(this.textBox5);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -416,98 +442,26 @@
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2});
+            this.tslbUsername,
+            this.tslDateTime});
             this.toolStrip1.Location = new System.Drawing.Point(0, 488);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(735, 25);
             this.toolStrip1.TabIndex = 37;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // tslbUsername
             // 
-            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(47, 22);
-            this.toolStripLabel1.Text = "name??";
+            this.tslbUsername.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.tslbUsername.Name = "tslbUsername";
+            this.tslbUsername.Size = new System.Drawing.Size(47, 22);
+            this.tslbUsername.Text = "name??";
             // 
-            // toolStripLabel2
+            // tslDateTime
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(55, 22);
-            this.toolStripLabel2.Text = "Datatime";
-            // 
-            // button2
-            // 
-            this.button2.Image = global::DTIWinFormProject.Properties.Resources.cancel;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(379, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 47);
-            this.button2.TabIndex = 59;
-            this.button2.Text = "ยกเลิก";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::DTIWinFormProject.Properties.Resources.pevious1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(379, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 47);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "คำนวณ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::DTIWinFormProject.Properties.Resources.cancel;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(434, 180);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 47);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "ยกเลิก";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::DTIWinFormProject.Properties.Resources.pevious1;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(434, 105);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 47);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "คำนวณ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::DTIWinFormProject.Properties.Resources.cancel;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(434, 180);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 47);
-            this.button5.TabIndex = 77;
-            this.button5.Text = "ยกเลิก";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::DTIWinFormProject.Properties.Resources.pevious1;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(434, 105);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 47);
-            this.button6.TabIndex = 76;
-            this.button6.Text = "คำนวณ";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = true;
+            this.tslDateTime.Name = "tslDateTime";
+            this.tslDateTime.Size = new System.Drawing.Size(55, 22);
+            this.tslDateTime.Text = "Datatime";
             // 
             // button8
             // 
@@ -519,6 +473,60 @@
             this.button8.Text = "หน้าจอหลัก";
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::DTIWinFormProject.Properties.Resources.cancel;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(463, 178);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 47);
+            this.button3.TabIndex = 71;
+            this.button3.Text = "ยกเลิก";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::DTIWinFormProject.Properties.Resources.calculator2;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(463, 101);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(98, 47);
+            this.button4.TabIndex = 70;
+            this.button4.Text = "คำนวณ";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Image = global::DTIWinFormProject.Properties.Resources.cancel;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(463, 178);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(98, 47);
+            this.button5.TabIndex = 83;
+            this.button5.Text = "ยกเลิก";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Image = global::DTIWinFormProject.Properties.Resources.calculator2;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(463, 101);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(98, 47);
+            this.button6.TabIndex = 82;
+            this.button6.Text = "คำนวณ";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // FrmShapeArea
             // 
@@ -529,7 +537,9 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmShapeArea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "คำนวณรูปทรง - DTI Soft V.1.0";
             this.Load += new System.EventHandler(this.FrmShapeArea_Load);
             this.tabControl1.ResumeLayout(false);
@@ -564,8 +574,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -576,8 +584,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RadioButton radioButton5;
@@ -585,7 +591,12 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel tslbUsername;
+        private System.Windows.Forms.ToolStripLabel tslDateTime;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
