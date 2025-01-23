@@ -43,5 +43,32 @@ namespace DTIWinFormProject
             frmMainMenu.ShowDialog();
             Hide();
         }
+
+        private void btOl_Click_Click(object sender, EventArgs e)
+        {
+            if(tbName.Text.Trim().Length == 0)
+            {
+                ShereData.showWaringMSG("ปเอนชื่อด้วย....");
+
+            }
+            else if (dtpBirthDate.Value.Year >= DateTime.Now.Year)
+            {
+                ShereData.showWaringMSG("ปีเกิดต้องน้แนกส่าปีปัจจุบัน....");
+
+            }
+
+            else
+            {
+                int age = DateTime.Now.Year - dtpBirthDate.Value.Year;
+                string birthDate = dtpBirthDate.Value.ToString("วันที่ dd เดือน MMMM พ.ศ. yyyyy", new CultureInfo("th-TH"));
+
+                string gender = rdMale.Checked == true ? "ฃาย" : "หญิง";
+                string detaShow = "ฃื่อ :" + tbName.Text + "\n" +
+                                  "วันเกิด :" + birthDate + "\n" +
+                                   "อายุ :" + age + "ปี\n" +
+                                   "เพศ :" + gender + "\n";
+                lbShowResult.Text = detaShow;
+            }
+        }
     }
 }

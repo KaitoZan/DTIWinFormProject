@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmwelcome));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.rdFemale = new System.Windows.Forms.RadioButton();
+            this.rdMale = new System.Windows.Forms.RadioButton();
+            this.lbShowResult = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
             this.tslDateTime = new System.Windows.Forms.ToolStripLabel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btCancel_Click = new System.Windows.Forms.Button();
+            this.btOl_Click = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
@@ -62,14 +62,14 @@
             this.label1.Text = "Welcome";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Mistral", 12.25F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(184, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 27);
-            this.textBox1.TabIndex = 11;
+            this.tbName.Font = new System.Drawing.Font("Mistral", 12.25F);
+            this.tbName.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbName.Location = new System.Drawing.Point(184, 153);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(256, 27);
+            this.tbName.TabIndex = 11;
             // 
             // label2
             // 
@@ -91,50 +91,50 @@
             this.label3.Text = "ว/ด/ป เกิด";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dateTimePicker1
+            // dtpBirthDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(184, 207);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(256, 27);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dtpBirthDate.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthDate.Location = new System.Drawing.Point(184, 207);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(256, 27);
+            this.dtpBirthDate.TabIndex = 13;
             // 
-            // radioButton2
+            // rdFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(334, 259);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(46, 17);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.Text = "หญิง";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdFemale.AutoSize = true;
+            this.rdFemale.Location = new System.Drawing.Point(334, 259);
+            this.rdFemale.Name = "rdFemale";
+            this.rdFemale.Size = new System.Drawing.Size(46, 17);
+            this.rdFemale.TabIndex = 17;
+            this.rdFemale.Text = "หญิง";
+            this.rdFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(216, 259);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(44, 17);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "ชาย";
-            this.radioButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdMale.AutoSize = true;
+            this.rdMale.Checked = true;
+            this.rdMale.Location = new System.Drawing.Point(216, 259);
+            this.rdMale.Name = "rdMale";
+            this.rdMale.Size = new System.Drawing.Size(44, 17);
+            this.rdMale.TabIndex = 16;
+            this.rdMale.TabStop = true;
+            this.rdMale.Text = "ชาย";
+            this.rdMale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rdMale.UseVisualStyleBackColor = true;
+            this.rdMale.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // label4
+            // lbShowResult
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(13, 318);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(527, 167);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "?????";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbShowResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbShowResult.Font = new System.Drawing.Font("Modern No. 20", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbShowResult.ForeColor = System.Drawing.Color.Blue;
+            this.lbShowResult.Location = new System.Drawing.Point(13, 318);
+            this.lbShowResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbShowResult.Name = "lbShowResult";
+            this.lbShowResult.Size = new System.Drawing.Size(527, 167);
+            this.lbShowResult.TabIndex = 18;
+            this.lbShowResult.Text = "?????";
+            this.lbShowResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1
             // 
@@ -169,29 +169,30 @@
             this.tslDateTime.Size = new System.Drawing.Size(63, 22);
             this.tslDateTime.Text = "datetime?";
             // 
-            // button2
+            // btCancel_Click
             // 
-            this.button2.Font = new System.Drawing.Font("Mistral", 12.25F);
-            this.button2.Image = global::DTIWinFormProject.Properties.Resources.cancel;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(567, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 69);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "ยกเลิก";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btCancel_Click.Font = new System.Drawing.Font("Mistral", 12.25F);
+            this.btCancel_Click.Image = global::DTIWinFormProject.Properties.Resources.cancel;
+            this.btCancel_Click.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCancel_Click.Location = new System.Drawing.Point(567, 416);
+            this.btCancel_Click.Name = "btCancel_Click";
+            this.btCancel_Click.Size = new System.Drawing.Size(126, 69);
+            this.btCancel_Click.TabIndex = 15;
+            this.btCancel_Click.Text = "ยกเลิก";
+            this.btCancel_Click.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btOl_Click
             // 
-            this.button3.Font = new System.Drawing.Font("Mistral", 12.25F);
-            this.button3.Image = global::DTIWinFormProject.Properties.Resources.start;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(567, 318);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 69);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "เข้าใช้งานระบบ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btOl_Click.Font = new System.Drawing.Font("Mistral", 12.25F);
+            this.btOl_Click.Image = global::DTIWinFormProject.Properties.Resources.start;
+            this.btOl_Click.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btOl_Click.Location = new System.Drawing.Point(567, 318);
+            this.btOl_Click.Name = "btOl_Click";
+            this.btOl_Click.Size = new System.Drawing.Size(126, 69);
+            this.btOl_Click.TabIndex = 14;
+            this.btOl_Click.Text = "เข้าใช้งานระบบ";
+            this.btOl_Click.UseVisualStyleBackColor = true;
+            this.btOl_Click.Click += new System.EventHandler(this.btOl_Click_Click);
             // 
             // button1
             // 
@@ -216,14 +217,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 523);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.lbShowResult);
+            this.Controls.Add(this.rdFemale);
+            this.Controls.Add(this.rdMale);
+            this.Controls.Add(this.btCancel_Click);
+            this.Controls.Add(this.btOl_Click);
+            this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -244,15 +245,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
+        private System.Windows.Forms.Button btCancel_Click;
+        private System.Windows.Forms.Button btOl_Click;
+        private System.Windows.Forms.RadioButton rdFemale;
+        private System.Windows.Forms.RadioButton rdMale;
+        private System.Windows.Forms.Label lbShowResult;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel tslbUsername;

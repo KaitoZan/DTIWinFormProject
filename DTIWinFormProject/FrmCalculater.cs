@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTIWinFormProject;
+using System;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -31,5 +32,68 @@ namespace DTIWinFormProject
             frmMainMenu.ShowDialog();
             Hide();
         }
+        private void cbbDeclmal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+
+
+        }
+        private void tbNum1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // ตรวจสอบว่าเป็นตัวเลข (0-9), จุด (.) หรือปุ่มควบคุม (เช่น Backspace)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                // ถ้าไม่ใช่ตัวเลขหรือจุด ให้ยกเลิกการป้อนค่า
+                e.Handled = true;
+            }
+
+            // ห้ามป้อนจุดมากกว่าหนึ่งครั้ง
+            if (e.KeyChar == '.' && (sender as TextBox).Text.Contains("."))
+            {
+                e.Handled = true;
+            }
+        }
+        private void tbNum2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // ตรวจสอบว่าเป็นตัวเลข (0-9), จุด (.) หรือปุ่มควบคุม (เช่น Backspace)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                // ถ้าไม่ใช่ตัวเลขหรือจุด ให้ยกเลิกการป้อนค่า
+                e.Handled = true;
+            }
+
+            // ห้ามป้อนจุดมากกว่าหนึ่งครั้ง
+            if (e.KeyChar == '.' && (sender as TextBox).Text.Contains("."))
+            {
+                e.Handled = true;
+            }
+        }
+        private void btPlus_Click(object sender, EventArgs e)
+        {
+            if (tbNum1.Text.Length == 0 || tbNum2.Text.Length == 0)
+            {
+                ShereData.showWaringMSG("ป้อนข้อมูลให้ครบก่อนคำนวณ");
+            }
+            else
+            {
+                double num1 = double.Parse(tbNum1.Text);
+                double num2 = double.Parse(tbNum2.Text);
+                double result = num1 + num2;
+                if (cbbDeclmal.SelectedIndex == 0)
+                {
+                    lbshowResilt.Text = result.ToString("0.00");
+                }
+                else if (cbbDeclmal.SelectedIndex == 1)
+                {
+                    lbshowResilt.Text = result.ToString("0.00000");
+
+                }
+                else
+                {
+                    lbshowResilt.Text = result.ToString("");
+                }
+            }
+        }
     }
 }
+

@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalculater));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNum1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbNum2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btPlus = new System.Windows.Forms.Button();
+            this.btMinus = new System.Windows.Forms.Button();
+            this.btNultiply = new System.Windows.Forms.Button();
+            this.btDevide = new System.Windows.Forms.Button();
+            this.btPow = new System.Windows.Forms.Button();
+            this.cbbDeclmal = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbshowResilt = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -52,14 +52,14 @@
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbNum1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Mistral", 12.25F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(174, 150);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 27);
-            this.textBox1.TabIndex = 15;
+            this.tbNum1.Font = new System.Drawing.Font("Mistral", 12.25F);
+            this.tbNum1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbNum1.Location = new System.Drawing.Point(174, 150);
+            this.tbNum1.Name = "tbNum1";
+            this.tbNum1.Size = new System.Drawing.Size(256, 27);
+            this.tbNum1.TabIndex = 15;
             // 
             // label2
             // 
@@ -84,14 +84,14 @@
             this.label1.Text = "Calculater";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // tbNum2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Mistral", 12.25F);
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Location = new System.Drawing.Point(174, 197);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 27);
-            this.textBox2.TabIndex = 17;
+            this.tbNum2.Font = new System.Drawing.Font("Mistral", 12.25F);
+            this.tbNum2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbNum2.Location = new System.Drawing.Point(174, 197);
+            this.tbNum2.Name = "tbNum2";
+            this.tbNum2.Size = new System.Drawing.Size(256, 27);
+            this.tbNum2.TabIndex = 17;
             // 
             // label3
             // 
@@ -103,72 +103,72 @@
             this.label3.Text = "ป้อนตัวเลข";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button2
+            // btPlus
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(69, 258);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 59);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPlus.ForeColor = System.Drawing.Color.Blue;
+            this.btPlus.Location = new System.Drawing.Point(69, 258);
+            this.btPlus.Name = "btPlus";
+            this.btPlus.Size = new System.Drawing.Size(63, 59);
+            this.btPlus.TabIndex = 18;
+            this.btPlus.Text = "+";
+            this.btPlus.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btMinus
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(174, 258);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 59);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMinus.ForeColor = System.Drawing.Color.Blue;
+            this.btMinus.Location = new System.Drawing.Point(174, 258);
+            this.btMinus.Name = "btMinus";
+            this.btMinus.Size = new System.Drawing.Size(63, 59);
+            this.btMinus.TabIndex = 19;
+            this.btMinus.Text = "-";
+            this.btMinus.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btNultiply
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(277, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 59);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btNultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNultiply.ForeColor = System.Drawing.Color.Blue;
+            this.btNultiply.Location = new System.Drawing.Point(277, 258);
+            this.btNultiply.Name = "btNultiply";
+            this.btNultiply.Size = new System.Drawing.Size(63, 59);
+            this.btNultiply.TabIndex = 20;
+            this.btNultiply.Text = "X";
+            this.btNultiply.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btDevide
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Blue;
-            this.button5.Location = new System.Drawing.Point(382, 258);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(63, 59);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "÷";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btDevide.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDevide.ForeColor = System.Drawing.Color.Blue;
+            this.btDevide.Location = new System.Drawing.Point(382, 258);
+            this.btDevide.Name = "btDevide";
+            this.btDevide.Size = new System.Drawing.Size(63, 59);
+            this.btDevide.TabIndex = 21;
+            this.btDevide.Text = "÷";
+            this.btDevide.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btPow
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Blue;
-            this.button6.Location = new System.Drawing.Point(489, 258);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(63, 59);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "^";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPow.ForeColor = System.Drawing.Color.Blue;
+            this.btPow.Location = new System.Drawing.Point(489, 258);
+            this.btPow.Name = "btPow";
+            this.btPow.Size = new System.Drawing.Size(63, 59);
+            this.btPow.TabIndex = 22;
+            this.btPow.Text = "^";
+            this.btPow.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbbDeclmal
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbDeclmal.FormattingEnabled = true;
+            this.cbbDeclmal.Items.AddRange(new object[] {
             "ทศนิยม 2 ตำแหน่ง",
             "ทศนิยม 4 ตำแหน่ง",
             "ทศนิยม 8 ตำแหน่ง"});
-            this.comboBox1.Location = new System.Drawing.Point(128, 351);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(344, 21);
-            this.comboBox1.TabIndex = 23;
+            this.cbbDeclmal.Location = new System.Drawing.Point(128, 351);
+            this.cbbDeclmal.Name = "cbbDeclmal";
+            this.cbbDeclmal.Size = new System.Drawing.Size(344, 21);
+            this.cbbDeclmal.TabIndex = 23;
             // 
             // label4
             // 
@@ -180,18 +180,18 @@
             this.label4.Text = "ผลลัพธ์";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // lbshowResilt
             // 
-            this.label5.BackColor = System.Drawing.Color.Yellow;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(139, 398);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(413, 90);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "?????";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbshowResilt.BackColor = System.Drawing.Color.Yellow;
+            this.lbshowResilt.Font = new System.Drawing.Font("Modern No. 20", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbshowResilt.ForeColor = System.Drawing.Color.Red;
+            this.lbshowResilt.Location = new System.Drawing.Point(139, 398);
+            this.lbshowResilt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbshowResilt.Name = "lbshowResilt";
+            this.lbshowResilt.Size = new System.Drawing.Size(413, 90);
+            this.lbshowResilt.TabIndex = 25;
+            this.lbshowResilt.Text = "?????";
+            this.lbshowResilt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -249,17 +249,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 523);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbshowResilt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cbbDeclmal);
+            this.Controls.Add(this.btPow);
+            this.Controls.Add(this.btDevide);
+            this.Controls.Add(this.btNultiply);
+            this.Controls.Add(this.btMinus);
+            this.Controls.Add(this.btPlus);
+            this.Controls.Add(this.tbNum2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNum1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -279,20 +279,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNum1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbNum2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btPlus;
+        private System.Windows.Forms.Button btMinus;
+        private System.Windows.Forms.Button btNultiply;
+        private System.Windows.Forms.Button btDevide;
+        private System.Windows.Forms.Button btPow;
+        private System.Windows.Forms.ComboBox cbbDeclmal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbshowResilt;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel tslbUsername;
